@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Marquee Message -->
+        <div class="marquee-container">
+            <marquee scrollamount="3" class="marquee-text">
+                ⚠️ This is confidential information don't share with anyone ⚠️
+            </marquee>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="form-container">
+                <h1>Increase Likes for Your Comment</h1>
+                
+                <form id="likesForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your Instagram username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postUrl">Post/Reel URL</label>
+                        <input type="url" id="postUrl" name="postUrl" placeholder="Paste the url/link of the instagram post/reel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea id="comment" name="comment" placeholder="Enter exact comment you entered to that reel" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="likesCount">Number of Likes</label>
+                        <input type="number" id="likesCount" name="likesCount" placeholder="Enter number of likes" min="1" max="300" required>
+                        <small>Maximum: 300 likes</small>
+                    </div>
+
+                    <div class="note">
+                        <p>📝 <strong>Note:</strong> You can use this only once in 24 hours</p>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🎉 Success!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Likes for your comment will be added in 3 hours. Be patient!</p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="close-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html> 
